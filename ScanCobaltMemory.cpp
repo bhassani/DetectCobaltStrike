@@ -64,8 +64,8 @@ int main()
     }
     do {
         DWORD patternSize = sizeof(pattern) / sizeof(pattern[0]);
-        DWORD patternSize_x64 = sizeof(pattern) / sizeof(pattern[0]);
-        DWORD patternSize_x86 = sizeof(pattern) / sizeof(pattern[0]);
+        DWORD patternSize_x64 = sizeof(pattern_x64) / sizeof(pattern_x64[0]);
+        DWORD patternSize_x86 = sizeof(pattern_x86) / sizeof(pattern_x86[0]);
         HANDLE processHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, ProcessEntry32.th32ProcessID);
         if (processHandle) {
             printDebug(ProcessEntry32.th32ProcessID, processHandle, 0, 0);
